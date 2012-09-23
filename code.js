@@ -2,13 +2,13 @@ $(function(){
     function devide(times){
         const size = 408;
         var next = function(e){
-            $(e.currentTarget).attr("src", dolphin).draggable().height(40).css("top",80);
+            $(e.currentTarget).attr("src", dolphin).draggable().height(40).css("top",80).css("left", 30);
             $("body").append('<h1 style="top:0;position:fixed">Drag and Drop the Dolphin</h1>')
             next = increment(1);
         }
         function zoom(n, setter){
             return function(e){
-                $(e.currentTarget).animate({height: "" + (size * (n/ times)) + "px"});
+                $(e.currentTarget).animate({height: (size * (n / times)) + "px"});
                 setter()
             }
         }
